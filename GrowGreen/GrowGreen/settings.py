@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = ')xg@13=3c-=xffi^$0t0l3@edp(=&2*non$mx)!d)1-4fyr(se'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =True
+DEBUG =False
 
 ALLOWED_HOSTS = ['*']
 
@@ -146,8 +146,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'pandeyprabhat583@gmail.com'
-EMAIL_HOST_PASSWORD = 'efuxcqjrhmzqqlsj'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
 
 #STATIC_DIRS = 'static'

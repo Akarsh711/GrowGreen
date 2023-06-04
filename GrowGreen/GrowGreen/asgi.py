@@ -10,6 +10,9 @@ import django
 from asgiref.sync import sync_to_async
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'GrowGreen.settings')
+from django.core.asgi import get_asgi_application
+
+django_asgi_app = get_asgi_application()
 
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter

@@ -17,7 +17,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-
+print("..........................", BASE_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -35,7 +35,7 @@ LOGIN_REDIRECT_URL = ''
 # Application definition
 
 INSTALLED_APPS = [
-    'daphne',
+    # 'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,11 +137,12 @@ CHANNEL_LAYERS = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATICFILES_DIRS = (
-     os.path.dirname(__file__)+'/static/',
+     '/static/',
     )
 
-STATIC_ROOT = 'static_files/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files/static/')
 STATIC_URL = '/static/'
+print(".......................................",STATIC_ROOT)
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
